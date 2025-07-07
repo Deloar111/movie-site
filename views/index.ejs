@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Movies</title>
+</head>
+
+<body>
+    <h1>🎬 Movie List</h1>
+    <a href="/add">➕ Add New Movie</a>
+    <ul>
+        <% movies.forEach(movie => { %>
+            <li>
+                <img src="<%= movie.poster %>" width="120"><br>
+                <strong><%= movie.title %></strong> -
+                <%= movie.genre %><br>
+                    <p>
+                        <%= movie.description %>
+                    </p>
+            </li>
+            <% }) %>
+    </ul>
+</body>
+
+</html>
